@@ -36,10 +36,9 @@ function getStringLength(value) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(/* value */) {
-  throw new Error('Not implemented');
+function isString(value) {
+  return typeof value === 'string' || value instanceof String;
 }
-
 /**
  * Returns the result of concatenation of two strings.
  *
@@ -52,10 +51,9 @@ function isString(/* value */) {
  *   concatenateStrings('aa', '') => 'aa'.
  *   concatenateStrings('', 'bb') => 'bb'
  */
-function concatenateStrings(/* value1, value2 */) {
-  throw new Error('Not implemented');
+function concatenateStrings(value1, value2) {
+  return value1.concat(value2);
 }
-
 /**
  * Returns the first character of the given string.
  *
@@ -70,7 +68,6 @@ function concatenateStrings(/* value1, value2 */) {
 function getFirstChar(/* value */) {
   throw new Error('Not implemented');
 }
-
 /**
  * Removes leading and trailing whitespace characters from the string.
  *
